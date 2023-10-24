@@ -14,7 +14,7 @@ public class Blog {
         strategy = GenerationType.SEQUENCE,
         generator = "blog_id_sequence"
 )
-    private long id;
+    private Integer id;
     private String author;
     private String title;
     private String content;
@@ -29,7 +29,7 @@ public class Blog {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
