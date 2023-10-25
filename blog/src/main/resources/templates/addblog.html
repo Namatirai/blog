@@ -6,9 +6,10 @@
 </head>
 <body>
 <form th:action="@{addblog}" method="post" th:object="${newBlog}">
-    <label>Name:<input type="text" th:field="*{title}" name="title"></label>
+
+    <label>Title:<input type="text" th:field="*{title}" name="title"></label>
     <label>Author:<input type="text" th:field="*{author}" name="author"></label>
-    <label>Content:<input type="text" th:field="*{content}" name="content"></label>
+    <label>Content:<textarea type="text" th:field="*{content}" name="content"></textarea></label>
     <input type="submit" value="submit">
 </form>
 </body>

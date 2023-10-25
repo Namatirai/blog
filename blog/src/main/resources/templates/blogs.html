@@ -10,7 +10,13 @@
 <body>
 <h1>Blogs</h1>
 <ul th:each="blog: ${blogs}">
-    <li th:text="${blog.author + ' ' + blog.content  + ' ' + blog.title}"></li>
+    <li  >
+        <h2 th:text="${blog.title}"></h2>
+        <p th:text="${blog.content}"></p>
+        <h4 th:text="${blog.author}"></h4>
+        <a th:href="@{'/deletepost/' + ${blog.id}}">Delete</a>
+        <a th:href="@{'/editpost/' + ${blog.id}}">Edit</a>
+    </li>
 
 </ul>
 </body>
